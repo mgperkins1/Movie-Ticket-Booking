@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    .container-sm {
+        width: 50%;
+    }
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+    color: red;
+}
+
+.error {
+    color: red;
+    position: relative;
+}

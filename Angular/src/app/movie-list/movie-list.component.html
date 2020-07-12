@@ -1,0 +1,76 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-dark text-info">
+            <h5>{{header}}</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!--justify-content-between-->
+                <div class="mr-auto mr-md-1">
+                    <div class="btn-group col-2 mb-3 mb-md-0">
+                        <button type="button" class="btn btn-info btn-small dropdown-toggle" data-toggle="dropdown">
+                            Sort By
+                        </button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" (click)="sortByArg = 'popularity'">Popularity</button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" (click)="sortByArg = 'descending'">Title (Z-A)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-auto ml-md-0 mr-md-auto">
+                    <div class="btn-group col-2">
+                        <button type="button" class="btn btn-info btn-small dropdown-toggle" data-toggle="dropdown">
+                            Filter By
+                        </button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" (click)="filterByArg = '2d'">2D</button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" (click)="filterByArg = '3d'">3D</button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" (click)="filterByArg = 'none'">None</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-12 ml-auto">
+                    <div class="input-group">
+                        <input type="search" class=" form-control" placeholder="Search" [(ngModel)]="searchTerm">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-info bg-info input-group-text" disabled>
+                                <i class="fas fa-search text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-around mt-5">
+                <div *ngFor="let m of filteredMovies | sortBy: sortByArg | filterBy: filterByArg"
+                    class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-dark">
+                            <img [src]="m.imgSrc" class="img-fluid img-thumbnail">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="text-info" appMouseHover #mouse="mouseHover" (mouseenter)="mouse.onMouseEnter()"
+                                (mouseleave)="mouse.onMouseLeave()">{{m.name | titlecase}}</h5>
+                            <!--(mousenter)="mouse.onMouseEnter()" (mouseleave)="mouse.onMouseLeave()"-->
+                            <p>{{m.language |titlecase}}</p>
+                            <p>{{m.format}}</p>
+                            <div class="row justify-content-around mb-3">
+                                <ngb-rating [(rate)]="m.rating">
+                                    <ng-template let-fill="fill">
+                                        <i class="fas fa-star star" [class.filled]="fill === 100"></i>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <button class="btn btn-info btn-small mx-auto" type="button"
+                                (click)="onBookMovie(m._id)">Book</button>
+                            <!-- (click)="onBookMovie(m)">Book</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

@@ -1,0 +1,12 @@
+.input-group>.custom-select:focus {
+    box-shadow: 0px 0px 4px 0.2rem rgba(23, 162, 184, 0.5);
+    border-color: #17a2b8;
+}
+
+.custom-select {
+    border-color: #17a2b8;
+}
+
+.input-group-text {
+    border-color: #17a2b8;
+}

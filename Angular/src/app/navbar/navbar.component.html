@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a href="" class="navbar-brand text-info">
+    <h3>{{title}}</h3>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <div class="row ml-auto">
+      <div *ngIf="welcomeUser === true" class="row mr-3 mb-3 mb-sm-0 ml-auto">
+        <div class="mr-3 pt-2">
+          <h5 class="text-info ml-3">Welcome {{username | titlecase}}</h5>
+        </div>
+        <button (click)="logout()" class="btn btn-info btn-small" type="button">Logout</button>
+      </div>
+      <div class="input-group mr-3 ml-auto ml-sm-0" style="width: 175px; height: fit-content;">
+        <div class="input-group-prepend">
+          <label class="input-group-text bg-info text-white" for="citySelect"><i
+              class="fas fa-map-marker-alt"></i></label>
+        </div>
+        <select class="custom-select" id="citySelect" #city (change)="onCitySelected(city.value)"
+          [disabled]="welcomeUser === false">
+          <!-- <option *ngFor="city of cities" value="city.name">{{city.name | titlecase}}</option> -->
+          <option selected value="miami lakes">Miami Lakes</option>
+          <option value="hialeah">Hialeah</option>
+          <option value="miami gardens">Miami Gardens</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</nav>

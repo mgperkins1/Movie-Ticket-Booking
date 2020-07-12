@@ -1,0 +1,107 @@
+{
+"name":"bad boys for life",
+"language":"english",
+"format":"2D",
+"rating":5,
+"imgSrc":"../../assets/BadBoysForLife.jpg",
+"city":"miami lakes"
+}
+
+{
+"name":"birds of prey",
+"language":"english",
+"format":"2D",
+"rating":3,
+"imgSrc":"../../assets/BirdsOfPrey.jpg",
+"city":"miami lakes"
+}
+
+{
+"name":"jumanji",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/Jumanji.jpg",
+"city":"miami lakes"
+}
+
+{
+"name":"sonic the hedgehog",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/SonicTheHedgehog.jpg",
+"city":"miami lakes"
+}
+
+{
+"name":"birds of prey",
+"language":"english",
+"format":"2D",
+"rating":3,
+"imgSrc":"../../assets/BirdsOfPrey.jpg",
+"city":"miami gardens"
+}
+
+{
+"name":"jumanji",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/Jumanji.jpg",
+"city":"miami gardens"
+}
+
+{
+"name":"sonic the hedgehog",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/SonicTheHedgehog.jpg",
+"city":"miami gardens"
+}
+
+{
+"name":"spies in disguise",
+"language":"english",
+"format":"3D",
+"rating":3,
+"imgSrc":"../../assets/SpiesInDisguise.jpg",
+"city":"miami gardens"
+}
+
+{
+"name":"jumanji",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/Jumanji.jpg",
+"city":"hialeah"
+}
+
+{
+"name":"sonic the hedgehog",
+"language":"english",
+"format":"3D",
+"rating":4,
+"imgSrc":"../../assets/SonicTheHedgehog.jpg",
+"city":"hialeah"
+}
+
+{
+"name":"spies in disguise",
+"language":"english",
+"format":"3D",
+"rating":3,
+"imgSrc":"../../assets/SpiesInDisguise.jpg",
+"city":"hialeah"
+}
+
+{
+"name":"the call of the wild",
+"language":"english",
+"format":"2D",
+"rating":4,
+"imgSrc":"../../assets/TheCallOfTheWild.jpg",
+"city":"hialeah"
+}
